@@ -1,9 +1,8 @@
 <h3>How to build</h3>
 <pre><code>
-mkdir -p build
-cd build
-cmake28 ..
 make
+clean files:
+make clean
 </code></pre>
 
 <h3>How to run</h3>
