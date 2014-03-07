@@ -1,2 +1,6 @@
 signal/build/
 signal/bin/
+network/tcp/build/
+network/tcp/bin/
+network/udp/build/
+network/udp/bin/
