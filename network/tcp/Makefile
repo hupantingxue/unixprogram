@@ -1,6 +1,6 @@
 .PHONY: all
 all:
-	@echo "make signal..."
+	@echo "make tcp..."
 	@mkdir -p build
 	@cd build && cmake28 ..
 	@make -C build
