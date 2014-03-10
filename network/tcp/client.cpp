@@ -2,6 +2,7 @@
 
 int main(int argc, char **argv) {
     int sockfd = 0;
+    int n = 0;
     struct sockaddr_in servaddr,cliaddr;
     char sendline[1000];
     char recvline[1000];
