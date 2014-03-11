@@ -1,8 +1,12 @@
 signal/build/
 signal/bin/
+signal/lib/
 network/tcp/build/
 network/tcp/bin/
+network/udp/lib/
 network/udp/build/
 network/udp/bin/
-md5/bin
-md5/build
+network/udp/lib/
+md5/bin/
+md5/build/
+md5/lib/
