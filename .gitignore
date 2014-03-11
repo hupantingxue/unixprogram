@@ -4,3 +4,5 @@ network/tcp/build/
 network/tcp/bin/
 network/udp/build/
 network/udp/bin/
+md5/bin
+md5/build
