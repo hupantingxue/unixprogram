@@ -1,7 +1,9 @@
 <h3>How to build</h3>
 <pre><code>
 make
+</code></pre>
 clean files:
+<pre><code>
 make clean
 </code></pre>
 
