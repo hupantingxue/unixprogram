@@ -1,12 +1,4 @@
-signal/build/
-signal/bin/
-signal/lib/
-network/tcp/build/
-network/tcp/bin/
-network/udp/lib/
-network/udp/build/
-network/udp/bin/
-network/udp/lib/
-md5/bin/
-md5/build/
-md5/lib/
+build/
+bin/
+lib/
+trie/dirty.txt
