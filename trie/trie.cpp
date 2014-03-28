@@ -1,7 +1,14 @@
+/**********************************************************
+ * Author: hupantingxue
+ * Date:   2014-03-28
+ * Hat-trie lib url: https://github.com/dcjones/hat-trie 
+ *********************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "hat-trie.h"
+#include <time.h>
 
 int main(int argc, char *argv[]) {
     hattrie_t  *pht = NULL;
@@ -40,7 +47,22 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    char *pig = "中共传人";
+    clock_t t0, t;
+    t0 = clock();
+    size_t r;
+    hattrie_iter_t *it = NULL;
+    const size_t repetitions = 1;
+    for (r = 0; r < repetitions; ++r) {
+        it = hattrie_iter_begin(pht, true);
+        while (!hattrie_iter_finished(it)) {
+            // printf("spam key[%d]\n", it);
+            hattrie_iter_next(it);
+        }
+    }
+    t = clock();
+    printf("finished. (%0.2f seconds)\n", (double) (t - t0) / (double) CLOCKS_PER_SEC);
+
+    char *pig = "中共";
     len = strlen(pig) + 1;
     if (NULL == (hattrie_tryget(pht, pig, len))) {
         printf("[%s] len[%d] not in.\n", pig, len);
