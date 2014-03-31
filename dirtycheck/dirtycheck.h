@@ -110,13 +110,13 @@ private:
     
 private:
 	int iMaxDirtyWordNum; 
-	int iShmID;  
 	int iEngShmID;    
 	int iGbInitiated;
 	int iEngInitiated;
 	int iMaxDirtyEnglishWordNum; 	
 	
 public:
+	int iShmID;  
 	char sErrMsg[200];
 	string strDirtyWord;
 };
