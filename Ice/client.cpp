@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
         if (!printer)
             throw "Invalid proxy";
 
-        printer->printString("Hello world!");
+        printer->printString("Hello world from hupantingxue!");
     } catch (const Ice::Exception &e) {
         cerr << e << endl;
         status = 1;
