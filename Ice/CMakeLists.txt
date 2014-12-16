@@ -8,7 +8,7 @@ set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib/")
 include_directories("./")
 
 set(SRC_LIST server.cpp Printer.cpp)
-set(SRC_LIST_CLI server.cpp Printer.cpp)
+set(SRC_LIST_CLI client.cpp Printer.cpp)
 
 add_executable(server ${SRC_LIST})
 add_executable(client ${SRC_LIST_CLI})

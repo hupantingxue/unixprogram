@@ -17,11 +17,12 @@ void PrinterI::printString(const string &s, const Ice::Current &) {
 int main(int argc, char *argv[]) {
     int status = 0;
     Ice::CommunicatorPtr ic;
+
     try {
         ic = Ice::initialize(argc, argv);
         Ice::ObjectAdapterPtr adapter
             = ic->createObjectAdapterWithEndpoints(
-                "SimplePrinterAdapter", "default -p 20000");
+                "SimplePrinterAdapter", "default -p 10000");
         Ice::ObjectPtr object = new PrinterI;
         adapter->add(object,
                      adapter->getCommunicator()->stringToIdentity("SimplePrinter"));
@@ -36,7 +37,12 @@ int main(int argc, char *argv[]) {
     }
 
     if (ic) {
-        ic->destroy();
+        try {
+            ic->destroy();
+        } catch (const Ice::Exception &e) {
+            cerr << e << endl;
+            status = 1;
+        }
     }
     return status;
 }

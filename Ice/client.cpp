@@ -7,6 +7,7 @@ using namespace PrintDemo;
 int main(int argc, char *argv[]) {
     int status = 0;
     Ice::CommunicatorPtr ic;
+
     try {
         ic = Ice::initialize(argc, argv);
         Ice::ObjectPrx base 
@@ -15,6 +16,7 @@ int main(int argc, char *argv[]) {
         PrinterPrx printer = PrinterPrx::checkedCast(base);
         if (!printer)
             throw "Invalid proxy";
+
         printer->printString("Hello world!");
     } catch (const Ice::Exception &e) {
         cerr << e << endl;
